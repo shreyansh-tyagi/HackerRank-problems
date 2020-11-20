@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int i,n,sum=0,a[100],m;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        sum=sum+a[i];
+    }
+    for(i=0;i<n;i++)
+    {
+        m=0;
+     for(int j=i;j<n;j++)
+     {
+        m+=a[j];
+        if(m>sum)
+        {
+            sum = m;
+        }
+     }
+    }
+      printf("%d",sum);
+}
+
