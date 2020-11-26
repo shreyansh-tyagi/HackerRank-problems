@@ -1,0 +1,160 @@
+Problem
+Submissions
+Leaderboard
+Discussions
+Let suppose we have three colors Red,Blue and Green. We can create any color by mixing these three colors with different intensities of each in the order (Ri,Bi,Gi) where Ri,Bi,Gi denotes the intensities of the colors Red,Blue and Green respectively.
+
+For example:- Color1(4,3,0) + Color2(3,1,5) = Possible Resultant Color with code (4,3,5),(4,1,5),(3,3,0),(3,1,5) and so on.
+
+In this problem, Color codes of mixing colors are given and a resultant color is given. You have to determine that the resultant color code is possible by mixing those given color codes.
+
+Input Format
+
+The first line of input contains two space separated integers n and q.
+
+The next n lines of input contains three space separated integers*Ri,Bi,Gi* denoting the respective intensities of red, blue and green color.
+
+The next q lines of input contains three space separated integers Ri,Bi,Gi denoting the respective intensities of red, blue and green color resultant color.
+
+Constraints
+
+1<= n,q <=10^5
+
+0<= Ri,Bi,Gi <= 10^5
+
+Output Format
+
+For each query print a single line containing "YES" if it is possible to obtain the given color, else print "NO".
+
+Sample Input 0
+
+2 2
+0 5 6
+1 4 9
+1 5 9
+2 4 9
+Sample Output 0
+
+YES
+NO
+Explanation 0
+
+For the first query, we can mix both the given colors to get (1,5,9).
+
+For the second query, there's no way to acheive the given color.
+
+Contest ends in an hour
+Submissions: 12
+Max Score: 100
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+#include<bits/stdc++.h>
+2
+using namespace std;
+3
+​
+4
+int search(int *arr, int n, int x)
+5
+{
+6
+    int flag = -1;
+7
+    for(int i = 0; i < n; i++)
+8
+    {
+9
+        if(arr[i] == x)
+10
+        {
+11
+            flag = 1;
+12
+            break;
+13
+        }
+14
+    }
+15
+    return flag;
+16
+}
+17
+​
+18
+int main()
+19
+{
+20
+    int n, q;
+21
+    cin>>n>>q;
+22
+    int *r = new int[n];
+23
+    int *b = new int[n];
+24
+    int *g = new int[n];
+25
+​
+26
+    for(int i = 0; i < n; i++)
+27
+    {
+28
+        cin>>r[i];
+29
+        cin>>b[i];
+30
+        cin>>g[i];
+31
+    }
+32
+​
+33
+    while(q--)
+34
+    {
+35
+        int a, d, c;
+36
+        int x, y, z;
+37
+        cin>>a>>d>>c;
+38
+​
+39
+        x = search(r, n, a);
+40
+        y = search(b, n, d);
+41
+        z = search(g, n, c);
+42
+​
+43
+        if(x == 1 && y == 1 && z == 1)
+44
+        {
+45
+            cout<<"YES\n";
+46
+        }
+47
+        else
+48
+        {
+49
+            cout<<"NO\n";
+50
+        }
+51
+    }
+52
+    return 0;
+53
+}
