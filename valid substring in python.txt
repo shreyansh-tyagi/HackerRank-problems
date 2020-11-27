@@ -1,0 +1,57 @@
+Given a string S consisting only of opening and closing parenthesis 'ie '(' and ')', find out the length of the longest valid(well-formed) parentheses substring. NOTE: Length of smallest the valid substring ( ) is 2.
+
+Input Format
+
+Input consists string of parentheses.
+
+Constraints
+
+1 <= |S| <= 10^8
+
+Output Format
+
+Display the length of valid substring.
+
+Sample Input 0
+
+ "(()("
+Sample Output 0
+
+2
+Explanation 0
+
+The longest valid substring is "()". Length = 2.
+
+Contest ends in an hour
+Submissions: 10
+Max Score: 100
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+
+def abc(s): 
+    n = len(s) 
+    stk = [] 
+    stk.append(-1) 
+    result = 0
+    for i in xrange(n): 
+        if string[i] == '(': 
+            stk.append(i) 
+        else:    
+            if len(stk) != 0: 
+               stk.pop()
+            if len(stk) != 0: 
+                result = max(result,  
+                             i - stk[len(stk)-1]) 
+            else: 
+                stk.append(i) 
+  
+    return result 
+s =  "(()("
+c=abc(s)
+print(c) 
+ 
+​

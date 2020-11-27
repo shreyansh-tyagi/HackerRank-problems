@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string s;
+    cin>>s;
+
+    int open = 0, len = 0, max = 0;
+    int l = s.length();
+
+    for(int i = 0; i < l; i++)
+    {
+        char c = s.at(i);
+        if(c == '(')
+        {
+            open++;
+        }
+        if(c == ')')
+        {
+            open--;
+            if(open >= 0)
+                len += 2;
+            if(max < len)
+                    max = len;
+            else
+            {
+                open = 0;
+                len = 0;
+            }
+        }
+    }
+
+    cout<<max;
+    return 0;
+}
