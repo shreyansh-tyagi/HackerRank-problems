@@ -1,0 +1,97 @@
+/*Adveta walks 100 steps first day and she walks 10 more steps then the previous day for the next each day. While Rahul walks 120 steps first day and He walks 5 more steps then the previous day for the next each day. And Jaanki walks 80 steps first day and she walks 20 more steps then the previous day for the next each day. If their trainer assigned same number of days to walk. Then calculate total number of steps they walked in the given days.
+
+Input Format
+
+An integer input to show number of days.
+
+Constraints
+
+1<= Days <=10
+
+Output Format
+
+Three lines of output
+
+First line shows total number of steps walked by Adveta.
+
+Second line shows total number of steps walked by Rahul.
+
+Thirs line shows total number of steps walked by Jaanki.
+
+Sample Input 0
+
+2
+Sample Output 0
+
+210
+245
+180
+Explanation 0
+
+For Adveta, first day 100 steps + second day 110 steps = 210 steps.
+
+For Rahul, first day 120 steps + second day 125 steps = 245 steps.
+
+For Jaanki, first day 80 steps + second day 100 steps = 180 steps.
+
+Contest ends in 4 days
+Submissions: 6
+Max Score: 10
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More */
+
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int a,r,c,j,d,i,e;
+    printf("enter the days:");
+    scanf("%d",&d);
+    for(i=1;i<d;i++)
+    {
+        e=1;
+        a=(d*100);
+        for(j=i+1;j<=d;j++)
+        {
+            a=a+(e*10);
+            ++e;
+        }
+        printf("%d\n",a);
+        break;
+    }
+    for(i=1;i<d;i++)
+    {
+        e=1;
+        r=(d*120);
+        for(j=i+1;j<=d;j++)
+        {
+            r=r+(e*5);
+            ++e;
+        }
+        printf("%d\n",r);
+        break;
+    }
+    for(i=1;i<d;i++)
+    {
+        e=1;
+        c=(d*80);
+        for(j=i+1;j<=d;j++)
+        {
+            c=c+(e*20);
+            ++e;
+        }
+        printf("%d",c);
+        break;
+    }
+}
+
+
+
+
+
+
+
+
