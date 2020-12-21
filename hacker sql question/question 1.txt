@@ -9,3 +9,4 @@ Station.jpg
 where LAT_N is the northern latitude and LONG_W is the western longitude.
 
 select distinct city from station where (left(city,1) not in ('a','e','i','o','u') and  right(city,1) not in ('a','e','i','o','u'));
+select distinct e_name from e_data where (left(e_name,1) not in ('a','e','i','o','u') and right(e_name,1) not in('a','e','i','o','u'));
