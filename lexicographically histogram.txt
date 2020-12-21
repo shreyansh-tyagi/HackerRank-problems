@@ -1,0 +1,51 @@
+/*
+Suppose Military gets a series of charachters and wants to count the number of charachters in that string in sorted manner with their occurence count
+
+Input Format
+
+Oneline input is expected as a random series of alphabets without space.
+
+Constraints
+
+A collection of alphabets without space
+
+Output Format
+
+Alphabet with it's occurence count
+
+Sample Input 0
+
+bbabbcbd
+Sample Output 0
+
+a1b5c1d1
+Explanation 0
+
+Alphabatically sorted character and it's occurence for eg. a1 and b5 etc.*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string s;
+    cin>>s;
+    int l = s.length();
+    vector<int> v(125, 0);
+    for(int i = 0; i < l; i++)
+    {
+        char c = s.at(i);
+        int ascii = (int)c;
+        v[ascii]++;
+    }
+    for(int i = 65; i < 125; i++)
+    {
+        if(v[i] != 0)
+        {
+            cout<<(char)i<<v[i];
+        }
+    }
+
+    return 0;
+}
