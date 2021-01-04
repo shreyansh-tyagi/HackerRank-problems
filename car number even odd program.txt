@@ -1,0 +1,50 @@
+/**KIET Group of Institutions administration applied the odd-even rule on the basis of the sum of the last two digits of the registered number. Now administration wants a program to check that the car is allowed on that particular day or not.
+
+In this you need to take last 2 digit number from user and todya's date (only dd). If there is a match like even - even then show "Yes" else "No".
+
+*If last two digit sum is 0 then consider it as even *For any invalid input print "Invalid input"
+
+Input Format
+
+    First line will contain the last two digits of the CAR Number.
+    Second line will contain Today's date(DD) Format.
+
+Constraints
+
+    Car number can't be more than 99.
+    Date can't be more than 31.
+    None of these can be negative.
+
+Output Format
+
+One line output saying only one of these "YES" or "NO" or "INVALID INPUT"
+
+Sample Input 0
+
+33
+12
+
+Sample Output 0
+
+YES
+
+Explanation 0
+
+Sum of both the digit of CAR Number 33 is even(3+3=6) and 12 (Date) is also even so YES **/
+
+
+
+a=input('enter last two digit of car number: ')
+b=input('enter the date: ')
+if(int(a)<100) and (int(b)<31):
+    for i in range(len(a)):
+        d=int(a[i])+int(a[i+1])
+        if(d==0):
+            print('INVALID INPUT')
+            break
+        #print(d)
+        break       
+    if(d%2==0) and (int(b)%2==0) and (d!=0):
+        print('YES')
+    elif(d!=0):
+        print('NO')

@@ -1,0 +1,61 @@
+/**You are given an array arr[] of N integers including 0. The task is to find the smallest positive number missing from the array. Find the smallest number in the smallest positive number and largest positive number. Example: 1 2 3 4 5 Explanation: In the given array, Smallest positive number = 1 Largest positive number = 5 So, Smallest positive missing number = 6
+
+Input Format
+
+First line consists the size of an array. Second line consists the elements of an array.
+
+Constraints
+
+1 <= N <= 106 -106 <= arr[i] <= 106
+
+Output Format
+
+Output contain the smallest positive number missing from the array.
+
+Sample Input 0
+
+5
+0 -10 1 3 -20
+
+Sample Output 0
+
+2
+
+Explanation 0
+
+Smallest positive missing number is 2.
+
+Sample Input 1
+
+8
+-7 -1 0 2 3 5 4 -5
+
+Sample Output 1
+
+1
+
+Explanation 1
+
+Explanation: Smallest number = 0 Largest number = 5 Smallest positive missing number = 1**/
+
+def findMissingPositive(arr, n): 
+    m = 1
+    x = [] 
+    for i in range(n): 
+        if (m < arr[i]): 
+            x.append(arr[i]) 
+      
+        elif (m == arr[i]): 
+            m = m + 1
+
+            while (x.count(m)): 
+                x.remove(m)  
+                m = m + 1 
+    return m 
+if __name__ == '__main__': 
+    a =int(input('enter the value: '))
+    arr=[]
+    for i in range(a):
+        arr.append(int(input()))
+    n=len(arr)    
+    print('smallest positive number is: ',findMissingPositive(arr, n)) 

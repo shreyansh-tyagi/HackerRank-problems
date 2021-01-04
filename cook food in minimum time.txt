@@ -1,0 +1,87 @@
+/**In a kictchen their are two identical burners. A chef wants to prepare food for his customers in minimum possible time. He can only cook two food items at a time but when any food item prepared and the burner is free then he can use it to prepare another food item.
+
+Let suppose their are N food item with C1,c2,c3,...cN time to cook each food. You have find in what optimal time, the chef can cook all the food items?
+
+Input Format
+
+First line contains single integer N,which is total number of food items.
+
+Second line contains time Ci for each food item to cook followed by N.
+
+Constraints
+
+1<= N <=100 1<= Ci <=10 for each valid value of i
+
+Output Format
+
+Output contains a single integer value which shows the total time taken by the chef to cook all the food items.
+
+Sample Input 0
+
+3
+2 2 2
+
+Sample Output 0
+
+4
+
+Explanation 0
+
+Here is three food items F1, F2 and F3 and each item cooks in two minutes.
+
+And at a time only two item can be cooked. So, When F1 and F2 cooked first then it takes two minutes for both of them and the rest food item F3 cooked in two minutes.
+
+So, Total minimum time to cook three food items is four minutes.
+
+F1+F2 in two minutes + F3 in two minutes = Four minutes
+
+Sample Input 1
+
+3
+1 2 3
+
+Sample Output 1
+
+3
+
+Explanation 1
+
+Here is 3 food items F1, F2 and F3 with cook time 1 min, 2 min, and 3 min respectively.
+
+Case 1:- When item F1 and F2 set to cook first then after 1 min item F1 is cooked and burners becomes free, then F3 it set to cook. Then item F3 takes 3 minutes to cook and meanwhile item F2 is also cooked.
+
+So, in this case 1, total time is 1 min + 3 min = 4 minutes.
+
+Case 2:- When item F1 and F3 set to cook first then after 1 min item F1 is cooked and burners becomes free, then F2 it set to cook. And item F3 takes 3 minutes to cook in total so, item F2 and F3 cooked at the same time that is after next 2 minutes.
+
+So, in this case 2, total time is 1 min + 2 min = 3 minutes.
+
+Case 3:- When item F2 and F3 set to cook first then after 2 min item F2 is cooked and burners becomes free, then F1 it set to cook.And item F3 takes 3 minutes to cook in total so, item F1 and F3 cooked at the same time that is after next 1 minute.
+
+So, in this case 3, total time is 2 min + 1 min = 3 minutes.
+
+Therefore, the optimal time to cook all food items is 3 minutes.**/
+
+
+a=int(input('enter the value :'))
+b=[]
+c=[]
+if(a<=100):
+    for i in range(a):
+        b.append(int(input()))
+    #print(b)
+    for j in range(len(b)-1):
+        if(b[j]<=10):
+            if(b[j]==b[j+1]):
+                c.append(b[j])
+            else:
+                c.append(b[j])
+        else:
+            break   
+#print(c)  
+x=[]
+for k in range(len(c)-1):
+    if(c[k]<=10):
+        x.append(c[k]+c[k+1])
+    print(x[-1]) 
+    #break
