@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int m, f, k;
+    cin>>m>>f>>k;
+    int pairs = 0;
+    pairs = pairs + m-k+1;
+    f--;
+    k--;
+    int fe = f/k;
+    int rem = f%k;
+    pairs += fe*k;
+    pairs += rem;
+    cout<<pairs;
+    return 0;
+}
