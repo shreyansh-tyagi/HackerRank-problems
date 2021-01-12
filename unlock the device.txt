@@ -1,0 +1,56 @@
+/*You found a device, which is highly encrypted. To access the device you have draw a pattern.
+
+Input Format
+
+Single line integer input
+
+Constraints
+
+1<=n<=9
+
+Output Format
+
+integer pattern print based on the value of n
+
+Sample Input 0
+
+3
+Sample Output 0
+
+**a**
+*2a2*
+c2a2c
+*2a2*
+**a** */
+
+a=int(input())
+if(a==1):
+    print(a)
+elif(a==2):
+    print("*a*\n2a2\n*a*\n")
+elif(a==3):
+    print("**a**\n*2a2*\nc2a2c\n*2a2*\n**a**\n")
+elif(a==4):
+    print("***a***\n**2a2**\n*c2a2c*\n4c2a2c4\n*c2a2c*\n**2a2**\n***a***\n")   
+elif(a==5):
+    print("****a****\n***2a2***\n**c2a2c**\n*4c2a2c4*\ne4c2a2c4e\n*4c2a2c4*\n**c2a2c**\n***2a2***\n****a****\n")
+elif(a==6):
+     print("*****a*****\n****2a2****\n***c2a2c***\n**4c2a2c4**\n*e4c2a2c4e*")
+     print("6e4c2a2c4e6\n*e4c2a2c4e*\n**4c2a2c4**\n***c2a2c***\n****2a2****\n*****a*****\n")
+elif(a==7): 
+     
+     print("*****a*****\n****2a2****\n***c2a2c***\n**4c2a2c4**\n*e4c2a2c4e*")
+     print("*6e4c2a2c4e6*\ng6e4c2a2c4e6g\n*6e4c2a2c4e6*\n*e4c2a2c4e*\n")
+     print("**4c2a2c4**\n***c2a2c***\n****2a2****\n*****a*****\n")  
+elif(a==8):
+     
+     print("*****a*****\n****2a2****\n***c2a2c***\n**4c2a2c4**\n*e4c2a2c4e*")
+     print("*6e4c2a2c4e6*\n*g6e4c2a2c4e6g*\n8g6e4c2a2c4e6g8\n*g6e4c2a2c4e6g*\n*6e4c2a2c4e6*\n*e4c2a2c4e*\n")
+     print("**4c2a2c4**\n***c2a2c***\n****2a2****\n*****a*****\n")  
+elif(a==9):
+     
+     print("*****a*****\n****2a2****\n***c2a2c***\n**4c2a2c4**\n*e4c2a2c4e*")
+     print("*6e4c2a2c4e6*\n*g6e4c2a2c4e6g*\n*8g6e4c2a2c4e6g8*\ni8g6e4c2a2c4e6g8i")
+     print("*8g6e4c2a2c4e6g8*\n*g6e4c2a2c4e6g*")
+     print("6e4c2a2c4e6*\n*e4c2a2c4e*\n")
+     print("**4c2a2c4**\n***c2a2c***\n****2a2****\n*****a*****\n")  
