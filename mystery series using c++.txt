@@ -1,0 +1,53 @@
+A wine bottle seller uses a mystery method to decide the price of his bottles, based upon for how many years (N) the bottle kept in the cellar. When he keeps the bottles in the cellar, he fixes the number of years (N) the bottles will remain there beforehand. In special cases he takes out these bottles after Y years, to sell in the market before their buried time period is over, but he applies the same mystery method which he had decided before, to calculate the price. The mystery method also includes a rent for storage which is directly proportional to Y.
+
+/**Input Format
+
+Single integer input denotes number of year(N) decided the bottle kept in the cellar
+
+Constraints
+
+2<=N<=10 1<=Y<=N
+
+Output Format
+
+single line output contanis N inetegrs.
+
+Sample Input 0
+
+5
+Sample Output 0
+
+3120 621 122 23 4
+Explanation 0
+
+All 5 integer output are showing value of mystery function which is based upon N and Y, where Y is decreasing from left to right. First value is showing the price of the wine bottle when it's taken out from cellar after Y year. Second value is showing the price of the wine bottle when it's taken out from cellar after Y-1 year. and so on
+
+Sample Input 1
+
+6
+Sample Output 1
+
+46650 7771 1292 213 34 5 **/
+
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int n,i;
+    cin>>n;
+    int a[n];
+    for(i=n;i>0;i--)
+    {
+        a[i] = pow(n,i)-i;
+        cout<<a[i]<<" ";
+    }
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
