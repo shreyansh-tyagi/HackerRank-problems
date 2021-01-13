@@ -1,0 +1,43 @@
+'''Write a program that takes a string and returns the number of alphanumeric characters that occur more than once.
+
+Examples duplicateCount("abcde") ➞ 0
+
+duplicateCount("aabbcde") ➞ 2
+
+duplicateCount("Aa") ➞ 0
+
+Input Format
+
+input consists a String.
+
+Constraints
+
+Duplicate characters are case sensitive.
+
+The input string will contain only alphanumeric characters.
+
+Output Format
+
+output consists an integer
+
+Sample Input 0
+
+abcde
+Sample Output 0
+
+0
+Sample Input 1
+
+aabbcde
+Sample Output 1
+
+2 '''
+
+
+a=input()
+count=0
+for i in range(len(a)):
+    for j in range(i+1,len(a)):
+        if(a[i]==a[j]) and (a[i]!=' '):
+            count+=1
+print(count)            
