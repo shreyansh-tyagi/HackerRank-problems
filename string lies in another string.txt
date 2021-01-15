@@ -1,0 +1,18 @@
+# to check whether one string is present in another string
+
+a=input('enter the value: ')
+b=input('enter the value: ')
+c,d=[],[]
+if(len(a)and len(b) <50):
+    for i in range(len(a)):
+        c.append(a[i])
+    print(c)
+    for j in range(len(b)):
+        d.append(b[j])
+    print(d)    
+for k in range(len(c)):
+    if(c[k] in d[k]):
+        print('yes')
+    
+    
+    
