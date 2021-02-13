@@ -1,0 +1,66 @@
+'''Today, we're working with binary numbers. Check out the Tutorial tab for learning materials and an instructional video!
+
+Task
+Given a base- integer, , convert it to binary (base-). Then find and print the base- integer denoting the maximum number of consecutive 's in 's binary representation. When working with different bases, it is common to show the base as a subscript.
+
+Example
+
+The binary representation of  is . In base , there are  and  consecutive ones in two groups. Print the maximum, .
+
+Input Format
+
+A single integer, .
+
+Constraints
+
+Output Format
+
+Print a single base- integer that denotes the maximum number of consecutive 's in the binary representation of .
+
+Sample Input 1
+
+5
+Sample Output 1
+
+1
+Sample Input 2
+
+13
+Sample Output 2
+
+2
+Explanation
+
+Sample Case 1:
+The binary representation of  is , so the maximum number of consecutive 's is .
+
+Sample Case 2:
+The binary representation of  is , so the maximum number of consecutive 's is .'''
+
+
+import math
+import os
+import random
+import re
+import sys
+
+if __name__ == '__main__':
+    n = int(input())
+
+    rmd = []
+    
+    while n > 0:
+        rm = n % 2
+        n = n//2
+        rmd.append(rm)
+    
+    count,result = 0,0
+    
+    for i in range(0,len(rmd)):
+        if rmd[i] == 0:
+            count = 0
+        else:
+            count +=1
+            result = max(result,count)
+    
+    print(result)
