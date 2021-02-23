@@ -1,0 +1,80 @@
+Staircase detail
+
+This is a staircase of size :
+
+   #
+  ##
+ ###
+####
+Its base and height are both equal to . It is drawn using # symbols and spaces. The last line is not preceded by any spaces.
+
+Write a program that prints a staircase of size .
+
+Function Description
+
+Complete the staircase function in the editor below.
+
+staircase has the following parameter(s):
+
+int n: an integer
+Print
+
+Print a staircase as described above.
+
+Input Format
+
+A single integer, , denoting the size of the staircase.
+
+Constraints
+
+ .
+
+Output Format
+
+Print a staircase of size  using # symbols and spaces.
+
+Note: The last line must have  spaces in it.
+
+Sample Input
+
+6 
+Sample Output
+
+     #
+    ##
+   ###
+  ####
+ #####
+######
+Explanation
+
+The staircase is right-aligned, composed of # symbols and spaces, and has a height and width of .
+
+
+
+#include<iostream>
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <algorithm>
+using namespace std;
+int main()
+{
+    int i,j,n,k;
+   // cout<<"enter the value of n: ";
+    cin>>n;
+    for(i=0;i<n;i++)
+    {
+        for(j=n-1;j>i;j--)
+        {
+            cout<<" ";
+
+        }
+        for(k=0;k<=i;k++)
+        {
+            cout<<"#";
+        }
+        cout<<"\n";
+    }
+    return 0;
+}
