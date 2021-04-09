@@ -1,0 +1,25 @@
+'''It's a RIIDLE doesn't need explanation.
+
+Input Format
+
+INPUT string s
+
+Constraints
+
+NOTHING
+
+Output Format
+
+In the form of String
+
+Sample Input 0
+
+hello@
+Sample Output 0
+
+HELLO@
+
+'''
+
+n=input()
+print(n.upper())
