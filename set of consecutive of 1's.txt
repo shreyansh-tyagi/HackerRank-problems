@@ -1,0 +1,47 @@
+##
+Arjun was working on a research paper based on binary number system. He designed an algorithm to find maximum number of consecutive set bits in the binary array.
+
+Binary array is an array that contains only 0’s & 1’s.
+
+Input Format
+
+Given the value of ‘n’ an array of size ‘n’ as input in two separate lines.
+
+Constraints
+
+1<= n <= 20
+
+Output Format
+
+Print the integer output.
+
+Sample Input 0
+
+4
+0 0 0 0
+Sample Output 0
+
+0
+##
+
+n=int(input())
+a=list(map(int,input().split()))[:n]
+count = 0 
+result = 0 
+  
+for i in range(0, n):
+      
+        # Reset count when 0 is found
+    if (a[i] == 0):
+        count = 0
+  
+        # If 1 is found, increment count
+        # and update result if count 
+        # becomes more.
+    else:
+              
+            # increase count
+        count+= 1 
+        result = max(result, count)
+
+print(result)
