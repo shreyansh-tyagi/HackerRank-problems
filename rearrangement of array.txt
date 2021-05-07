@@ -1,0 +1,33 @@
+##Harish got a task to shift the values of array nder given condition that the last element of array should get raplaced with first element of array and all the other elements must shift to their left index by one position only.
+
+Input Format
+
+Given the value of ‘n’ an array of size ‘n’ as input in two separate lines.
+
+Constraints
+
+1<= n <= 20
+
+Output Format
+
+Provide the reaaranged array in output.
+
+Sample Input 0
+
+4
+1 2 3 4
+Sample Output 0
+
+2 3 4 1
+
+##
+
+import array as arr
+n=int(input())
+l=list(map(int,input().split()))[:n]
+b=arr.array('i',l)
+d=n+1
+c=b[0]
+b.insert(n+1,c)
+for i in range(1,d):
+    print(b[i],end=' ')
