@@ -1,0 +1,30 @@
+Abhinav got the task to print the elements present at odd positions inside the string separated by a comma. Assume indexing starts from 0.
+
+Input Format
+
+Input a string of length n.
+
+Constraints
+
+Nothing
+
+Output Format
+
+Print space separated characters.
+
+Sample Input 0
+
+aryan
+Sample Output 0
+
+r a
+Sample Input 1
+
+ara
+Sample Output 1
+
+r
+
+n=input()
+for i in range(1,len(n),2):
+    print(n[i],end=' ')
