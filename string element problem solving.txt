@@ -1,0 +1,32 @@
+Vishal got a task to verify that the given string contain “ra’ as substring or not.
+
+Input Format
+
+Input a string of length n.
+
+Constraints
+
+Nothing
+
+Output Format
+
+Print ‘Yes’ else ‘No’ accordingly.
+
+Sample Input 0
+
+aaryn
+Sample Output 0
+
+No
+Sample Input 1
+
+araa
+Sample Output 1
+
+Yes
+
+n=input()
+if 'ra' in n:
+    print('Yes')
+else:
+    print('No')
