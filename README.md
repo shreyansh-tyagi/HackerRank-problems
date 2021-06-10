@@ -10,7 +10,6 @@
 * *10 days of statistics*
 * *Problem solving*
 
-![badges](https://user-images.githubusercontent.com/71514413/119621522-d9ac1b80-be23-11eb-88c5-592b323b237a.png)
-
+![badges](https://user-images.githubusercontent.com/71514413/121471927-178d7000-c9de-11eb-8f61-0280cca0d98d.png)
 
 :innocent::innocent::innocent:
